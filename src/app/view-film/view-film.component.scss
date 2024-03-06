@@ -1,0 +1,102 @@
+
+.viewFilmBody{
+ padding: 10px;
+
+
+.header {
+    text-align: center;
+    margin: 15px;
+    font-size: 30px;
+    font-weight: 800;
+  }
+
+  .discryption {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .planetDetails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .left,
+    .right {
+      margin: 15px;
+      padding: 15px;
+      text-align: left;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+    }
+  }
+
+
+
+  // cards
+
+  .main-header {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 250px;
+    overflow: hidden;
+    font-size: 16px;
+
+    .name {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .viewMore {
+      text-align: center;
+      color: blue;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  }
+
+  .card h2 {
+    margin-top: 0;
+  }
+
+  //! cards
+
+
+
+  .planetList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+      padding: 5px 10px;
+      margin: 5px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+  }
+}
+
+
+a{
+  cursor: pointer;
+  color: rgba(0, 0, 255, 0.54);
+}

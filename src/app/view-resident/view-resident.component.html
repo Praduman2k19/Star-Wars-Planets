@@ -1,0 +1,95 @@
+<div class="viewFilmBody">
+  <div class="header">Residence name : {{recidentData?.name}}</div>
+  <!-- <div class="discryption"> {{recidentData?.opening_crawl}}</div> -->
+  <div class="planetDetails">
+    <div class="left">
+      <div>Home world: <a (click)="viewPlanet(homeworld.url)"> {{homeworld?.name}} </a></div>
+      <div>Height: {{recidentData?.height}}</div>
+      <div>Hair color: {{recidentData?.hair_color}}</div>
+    </div>
+    <div class="right">
+      <div>Skin color: {{recidentData?.skin_color}}</div>
+      <div>Eye color: {{recidentData?.eye_color}}</div>
+    </div>
+  </div>
+
+
+
+
+  <!-- <div class="main">
+    <div class="main-header"> Planet Name </div>
+    <div class="planetList">
+      <h6 *ngIf="planetsList?.length==0">Data not available.</h6>
+      <a *ngFor="let item of planetsList" (click)="viewPlanet(item.url)">{{item.name}}</a>
+    </div>
+  </div> -->
+
+
+
+
+  <div class="main">
+    <div class="main-header">
+      Films
+    </div>
+    <div class="card-list">
+      <h6 *ngIf="filmList?.length==0">Data not available.</h6>
+      <div class="card" *ngFor="let item of filmList">
+        <div class="name">Name: {{item.name}}</div>
+        <div>Height: {{item.height}}</div>
+        <div>Hair color: {{item.hair_color}}</div>
+        <div>Eye color: {{item.eye_color}}</div>
+        <div>Skin color: {{item.skin_color}}</div>
+        <div>Films: {{item.films?.length}}</div>
+        <div>Species: {{item.species?.length}}</div>
+        <div class="viewMore" (click)="viewRecidenceDetails(item?.url)">View more</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="main">
+    <div class="main-header">
+      Vehicles
+    </div>
+    <div class="card-list">
+      <h6 *ngIf="vehiclesList?.length==0">Data not available.</h6>
+      <div class="card" *ngFor="let item of vehiclesList">
+        <div class="name">Name: {{item.name}}</div>
+        <div>Cargo capacity: {{item.cargo_capacity}}</div>
+        <div>Consumables: {{item.consumables}}</div>
+        <div>Cost in credits: {{item.cost_in_credits}}</div>
+        <div>Crew: {{item.crew}}</div>
+        <div>Manufacturer: {{item.manufacturer}}</div>
+        <div>Max atmosphering speed: {{item.max_atmosphering_speed}}</div>
+        <div>Repulsorcraft: {{item.repulsorcraft}}</div>
+        <div>Passengers: {{item.passengers}}</div>
+        <div>Model: {{item.model}}</div>
+        <div>Length: {{item?.length}}</div>
+        <div class="viewMore" (click)="viewRecidenceDetails(item?.url)">View more</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="main-header">
+      Starships
+    </div>
+    <div class="card-list">
+      <h6 *ngIf="starshipsList?.length==0">Data not available.</h6>
+      <div class="card" *ngFor="let item of starshipsList">
+        <div class="name">Name: {{item.name}}</div>
+        <div>Cargo capacity: {{item.cargo_capacity}}</div>
+        <div>Consumables: {{item.consumables}}</div>
+        <div>Cost in credits: {{item.cost_in_credits}}</div>
+        <div>Crew: {{item.crew}}</div>
+        <div>Manufacturer: {{item.manufacturer}}</div>
+        <div>Max atmosphering speed: {{item.max_atmosphering_speed}}</div>
+        <div>MGLT: {{item.MGLT}}</div>
+        <div>Passengers: {{item.passengers}}</div>
+        <div>Model: {{item.model}}</div>
+        <div>Starship class: {{item.starship_class}}</div>
+        <div>Length: {{item?.length}}</div>
+      </div>
+    </div>
+  </div>
+</div>

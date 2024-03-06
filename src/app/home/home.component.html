@@ -1,0 +1,30 @@
+<div class="main">
+  <div class="main-header">
+    Welcome to Star Wars Planets Directory
+  </div>
+  <div class="card-list">
+    <h6 *ngIf="planetData?.length==0">Data not available.</h6>
+    <div class="card" *ngFor="let item of planetData?.results">
+      <div class="name">{{item.name}}</div>
+      <div>Diameter: {{item.diameter}}</div>
+      <div>Gravity: {{item.gravity}}</div>
+      <div>Climate: {{item.climate}}</div>
+      <div>Orbital period: {{item.orbital_period}}</div>
+      <div>Surface Water: {{item.surface_water}}</div>
+      <div>Terrain: {{item.terrain}}</div>
+      <!-- <div>Residents: <a>view</a></div>
+      <div>Films: <a (click)="viewFilms(item.films)">view</a></div> -->
+      <div class="viewMore" (click)="viewDetails(item?.url)">View more</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="pagination">
+  <button id="prevBtn" (click)="prevNext(-1)">Previous</button>
+
+  <a *ngFor="let item of dynamicArrayP;let i=index" [ngClass]="{'active': currentPage==i+1}" (click)="updatePage(i+1)"><div  >{{i+1}}</div></a>
+  <button id="nextBtn" (click)="prevNext(1)">Next</button>
+</div>
